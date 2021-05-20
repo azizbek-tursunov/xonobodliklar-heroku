@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ object.title }}{% endblock title %}
+
+{% block content %}
+<section class="flex align-items-center">
+    <div class="container">
+      <div class="row article-wrapper justify-center align-top">
+        <div class="article-header col-md-8">
+          <h1 class="title">{{ object.title }}</h1>
+          <div class="date">
+            <span>{{ object.date|date:"d F, Y " }}</span>
+          </div>
+        </div>
+
+        <article class="content col-md-8 col-12">
+            <h1>{{ object.title }}<br></h1>
+            <p>{{ object.qisqa|safe }}</p>
+            <figure><div class="figure_wrapper"><img src="{{object.img.url}}"></div></figure>
+            <p>{{ object.body|safe }}</p>
+
+        </article>
+
+{% endblock content %}
