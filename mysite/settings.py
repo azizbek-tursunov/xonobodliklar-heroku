@@ -41,7 +41,6 @@ INSTALLED_APPS = [
 
     # 3rd party
     'crispy_forms',
-    'storages',
 
     # local
     'yangiliklar.apps.YangiliklarConfig',
@@ -134,7 +133,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MEDIA_URL = '/media/'
