@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '9n7vse4bn@b9rr6fif4@$lm4c+k1srb!_$b$&qmeb2aph6vk^k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['xonobodliklar.herokuapp.com', '127.0.0.1']
 
@@ -145,7 +145,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = "/media/"
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "static")
+MEDIA_ROOT = os.path.join(BASE_DIR, "live-static-files", "static-root")
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
