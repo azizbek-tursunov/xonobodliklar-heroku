@@ -132,20 +132,19 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+    os.path.join(BASE_DIR, 'static')
 ]
 
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, "live-static-files", "static-root")
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-#STATIC_ROOT = "/home/cfedeploy/webapps/cfehome_static_root/"
 
-MEDIA_URL = "/media/"
+MEDIA_URL = '/images/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "live-static-files", "media-root")
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
